@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+        <div class="container">
+            <header class="header">
+                <h1 id="title" class="text-center">Sign up for our school trip</h1>
+                <p id="message" class="text-center">If you're selected, you will recieve an email containing the next steps to follow.</p>
+            </header>
+            <form id="survey-form">
+                <div class="form-group">
+                    <label for="name" id="name-label">Name</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required/>
+                </div>
+                <div class="form-group">
+                    <label id="email-label" for="email">Email</label>
+                    <input
+                      type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required/>
+                  </div>
+                  <div class="form-group">
+                    <label for="number" id="number-label">Age</label>
+                    <input type="number" name="age" id="number" min="18" max="65" class="form-control" placeholder="Age" required>
+                  </div>
+                  <div class="form-group">
+                    <p>Why should we choose you?</p>
+                    <select name="reason" id="dropdown" class="form-control" required>
+                        <option disabled selected value>You should choose me because</option>
+                        <option value="honor">I am an honor student</option>
+                        <option value="vacation">I would like to go on a small vacation</option>
+                        <option value="study">It will help with my study</option>
+                        <option value="preferNo">Prefer not to say</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <p>What cities were you hoping to visit?</p>
+                    <input type="checkbox" name="check" id="Madrid" value="Madrid">
+                    <label for="check-box">Madrid</label>
+
+                    <input type="checkbox" name="check" id="Barcelona" value="Barcelona">
+                    <label for="check-box">Barcelona</label>
+
+                    <input type="checkbox" name="check" id="Seville" value="Seville">
+                    <label for="check-box">Seville</label>
+
+                    <input type="checkbox" name="check" id="Málaga" value="Málaga">
+                    <label for="check-box">Málaga</label>
+                  </div>
+
+                  <div class="form-group">
+                    <p>Do you require any special needs assitance?</p>
+                    <input type="radio" name="assistance" id="yes" value="yes">
+                    <label for="yes">Yes</label>
+                    <input type="radio" name="assistance" id="no" value="no">
+                    <label for="no">No</label>
+                  </div>
+
+                  <div class="form-group">
+                    <p>If so please let us know...</p>
+                    <textarea name="comment" id="comments" cols="30" rows="10" placeholder="Enter info here..."></textarea>
+                  </div>
+
+                  <div class="thank-you">
+                    <h3 class="thanks">Thank you for your time.</h3>
+                    <p id="please">Please submit your info and we will contact you in time. </p>
+                </div>
+                  
+
+
+                  <div class="form-group">
+                    <button type="submit" id="submit" class="submit-button">
+                      Submit
+                    </button>
+        </div>
+    </form>
+</body>
+</html>
