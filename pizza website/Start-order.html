@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Create Pizza</title>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="logo">Ele's Pizzeria</a>
+        <div class="header-right">
+          <a class="location">123 west street</a>
+          <a class="active" href="about.html">About</a>
+          <a class="active" href="login.html">Login</a><!--possibly remove this since they would already be logged in-->
+        </div>
+</div>
+
+<section id="overlay">
+<hr>
+  <form action="submit.html" method="POST">
+    <h1>Customize your pizza</h1>
+
+  <section class="dough-type">
+    <label for="dough">What kind of dough would you like?</label>
+    <input list="doughs" id="dough" name="dough">
+    <datalist id="doughs">
+      <option value="New Haven Style">New Haven Style</option>
+      <option value="Neapolitan">Neapolitan</option>
+      <option value="New York Style">New York Style</option>
+      <option value="Flatbread">Flatbread</option>
+    </datalist>
+  </section>
+  <hr>
+
+  <section class="sauce-type">
+    <label for="sauce">What type of sauce would you like?</label>
+    <input list="sauces" id="sauce" name="sauce">
+    <datalist id="sauces">
+      <option value="Pesto">Pesto</option>
+      <option value="White Garlic Sauce">White Garlic Sauce</option>
+      <option value="Marinara Sauce">Marinara Sauce</option>
+      <option value="Creamy Alfredo Sauce">Creamy Alfredo Sauce</option>
+    </datalist>
+  </section>
+  <hr>
+
+  <section class="cheese-type">
+    <label for="cheese">What type of cheese would you like?</label>
+    <input list="cheeses" id="cheese" name="cheese">
+    <datalist id="cheeses">
+      <option value="Mozzarella Cheese">Mozzarella Cheese</option>
+      <option value="Provolone Cheese">Provolone Cheese</option>
+      <option value="Gouda">Gouda</option>
+      <option value="Ricotta">Ricotta</option>
+    </datalist>
+  </section>
+  <hr>
+
+  <section class="veggies">
+    <span>What veggies would you like?</span>
+  <br>
+    <input type="checkbox" name="veggies" id="tomato" value="tomato">
+    <label for="tomato">Tomato</label>
+    <input type="checkbox" name="veggies" id="peppers" value="peppers">
+    <label for="peppers">Peppers</label>
+    <input type="checkbox" name="veggies" id="onion" value="onion">
+    <label for="onion">Onion</label>
+    <input type="checkbox" name="veggies" id="mushrooms" value="mushrooms">
+    <label for="mushrooms">Mushrooms</label>
+    <input type="checkbox" name="veggies" id="spinach" value="spinach">
+    <label for="spinach">Spinach</label>
+ </section>
+  <hr>
+
+  <section class="protein">
+    <span>What protein would you like?</span>
+  <br>
+    <input type="checkbox" name="protein" id="sausage" value="sausage">
+    <label for="sausage">Sausage</label>
+    <input type="checkbox" name="protein" id="pepperoni" value="pepperoni">
+    <label for="pepperoni">Pepperoni</label>
+    <input type="checkbox" name="protein" id="meatballs" value="meatballs">
+    <label for="meatballs">Meatballs</label>
+    <input type="checkbox" name="protein" id="bacon" value="bacon">
+    <label for="bacon">Bacon</label>
+    <input type="checkbox" name="protein" id="ham" value="ham">
+    <label for="ham">Ham</label>
+    <input type="checkbox" name="protein" id="chicken" value="chicken">
+    <label for="chicken">Chicken</label>
+ </section>
+  <hr>
+ 
+  <section class="cooked">
+    <label for="crispy">How do you want your pizza cooked</label>
+    <br>
+    <span>Normal</span>
+    <input type="range" name="crispy" id="crispy" value="3" min="1" max="5">
+    <span><Extra-Crispy>Extra-Crispy</span>
+  </section>
+  <hr>
+
+  <section class="for-where">
+    <span>For Here or To Go</span>
+    <br>
+    <input type="radio" name="here" id="here" value="yes">
+    <label for="Here">Here</label>
+    <input type="radio" name="To GO" id="TO GO" value="yes">
+    <label for="To Go">To Go</label>
+  </section>
+  <hr>
+
+         <button type="submit"><a href="submit.html">order</a></button>
+
+      </form> <!--create page for submit.html-->
+    </section>   
+  </body>
+</html>
