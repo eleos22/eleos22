@@ -1,0 +1,282 @@
+
+body{
+    background-image: linear-gradient(to top, #090909, #2d2d2d, #525252, #797979, #a3a3a3);
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "main main main main"
+    "content1 content1 content2 content2"
+    "footer footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .25fr 1.5fr 1fr .25fr;
+    gap: 0.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 12px;
+        text-align: center;
+}
+
+/*nav*/
+nav{
+    grid-area: nav;    
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 11px 11px;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.topnav a:hover {
+  background-color: rgb(187, 187, 187);
+}
+
+.topnav a.active {
+  color: white;
+}
+
+/*search*/
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+/*brand title*/
+.brand-title h1{
+    font-size: 2.5rem;
+    letter-spacing: 8px;
+    margin: 1rem;
+    color: #000000;
+}
+
+/*main*/
+main{
+    grid-area: main;
+}
+
+main h2{
+  color: rgb(255, 255, 255);
+  background-color: #333333;
+}
+
+.gallery{
+  width: 85vw;
+  height: 45vmin;
+  display: flex;
+  gap: 5px;
+}
+
+.gallery img{
+  height: 100%;
+  flex: 1;
+  object-fit: cover;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.gallery img:hover{
+  flex: 4;
+}
+
+/*content1*/
+#content1{
+    grid-area: content1;
+    background: rgba(199, 199, 199, 0.6);
+    border-radius: 10px;
+}
+
+.news{
+  font-size: 1rem;
+  text-align: start;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 10px;
+  height: 80%;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  line-height: 150%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform:none;
+}
+.news::first-letter{
+  color: #ffff;
+  font-size: 3rem;
+  font-family: 'satisfy';
+}
+
+.ex, .ex2{
+  font-size: 1.5rem;
+  color: #ffff;
+}
+
+/*content2*/
+#content2{
+    grid-area: content2;
+    background: rgba(199, 199, 199, 0.6);
+    border-radius: 10px;
+}
+
+#see{
+  color: rgb(0, 0, 0);
+  font-size: 1.25rem;
+  text-decoration: underline;
+  margin-top: 5%;
+}
+
+.list{
+  list-style: none;
+  display:flex ;
+  margin: 1rem;
+
+}
+
+.list a:hover{
+  background-color: rgb(90, 90, 90);
+  
+}
+
+.list a{
+  display: flexbox;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  justify-content: space-between;
+}
+
+/*footer*/
+footer{
+    grid-area: footer;
+}
+
+.social-media a {
+  font-size: 25px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10%;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.4);
+  margin: 0 10px;
+  color: #fff;
+  opacity: 0.75;
+}
+
+
+
+/*650px or lower good for phone*/
+@media only screen and (max-width: 650px){
+    .container{
+        grid-template-areas: 
+           "nav" 
+           "main"
+           "content1" 
+           "content2"
+           "footer";
+        grid-template-columns: 2fr;
+        grid-template-rows: 1fr 1.5fr 1fr 1fr .25fr;
+    }
+}
+
+/*650px or lower good for phone*/
+@media screen and (max-width: 650px){
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    margin: 2px;
+    padding: 8px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid rgb(0, 0, 0);  
+  }
+
+  #content1, #content2{
+    padding: 1%;
+  }
+
+  #content2 .list{
+    display:flexbox;
+    justify-content: space-evenly;
+    font-size: 1rem;
+    
+  }
+}
+/*650px or higher for desktop*/
+@media only screen and (min-width: 650px){
+  .container{
+      grid-template-areas: 
+         "nav nav nav nav" 
+         "main main main main"
+         "content1 content1 content2 content2" 
+         "footer footer footer footer";
+         grid-template-columns: 1fr 1fr 1fr 1fr;
+         grid-template-rows: .25fr 1fr 1fr .25fr;
+         gap: 0.2rem;
+             font-weight: 700;
+             text-transform: uppercase;
+             font-size: 12px;
+             text-align: center;
+  }
+
+  #content1, #content2{
+    padding: 5%;
+  }
+
+  #content1 .news {
+    font-size: 25px;
+  }
+
+  #content2 .list{
+    display:flexbox;
+    justify-content: space-evenly;
+    font-size: 1rem;
+    
+    
+  }
+}
+
+
