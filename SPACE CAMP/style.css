@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&family=Space+Mono&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: url(./this\ one.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* header start*/
+.header{
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+
+.header a{
+    text-decoration: none;
+    margin: 1rem;
+    padding: .3rem;
+    font-size: large;
+    color: rgb(255, 255, 255);
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 30px;
+    background-color: #0b579e;
+}
+
+.header a:hover{
+    color: #0b579e;
+    border: 4px solid #0b579e;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+}
+/* header end*/
+
+/* container start*/
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* container end*/
+
+/* title start*/
+.title{
+    color: rgb(255, 255, 255);
+    font-size: 6rem;
+    font-family: monospace;
+    margin-top: 10%;
+    text-shadow: 4px 4px #0b579e;
+    align-items: center;
+    justify-content: center;
+}
+/* title end*/
+
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    margin: 10% 0 10px 0;
+}
+
+form .user-details .input-box{
+    margin-bottom: 5px;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .details{
+    display: flex;
+    margin: 5%;
+    padding: 5%;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-family: monospace;
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration: underline #0b579e 5px;
+}
+
+.user-details .input-box input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 4px solid #ffffff;
+    padding-left: 15px;
+    font-size: 20px;
+    background-color: transparent;
+    letter-spacing:2px ;
+    color: #ffffff;
+}
+
+input::placeholder{
+    color: white;
+}
+
+.submit-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+}
+
+button{
+    height: 35px;
+    width: 40%;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: large;
+    color: rgb(255, 255, 255);
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 30px;
+    background-color: #0b579e;
+}
+
+button:hover{
+    color: #0b579e;
+    border: 4px solid #0b579e;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.forgot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+}
+
+.forgot a{
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: underline #0b579e 5px;
+}
+
+.bottom{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    border-top: 4px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+.bottom li{
+    list-style: none;
+    padding: 40px;
+}
+
+.bottom li a{
+    height: 35px;
+    width: 40%;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 30px;
+    background-color: #0b579e;
+    text-decoration: none;
+    padding: 10%;
+}
+
+.bottom li a:hover{
+    height: 35px;
+    width: 40%;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 1.2rem;
+    color:#0b579e;
+    border: 4px solid #0b579e;
+    border-radius: 30px;
+    background-color: #ffffff;
+    text-decoration: none;
+    padding: 10%;
+}
+
+h5 a{
+    color: #ffffff;
+    font-size: 16px;
+    font-family: monospace;
+    text-decoration: none;
+    
+}
+
+h5 a:hover{
+    color: #0b579e;
+}
+
+@media only screen and (min-width:330px){
+    .title{
+        font-size: 5.2rem;
+    }
+}
+
+@media only screen and (min-width: 700px){
+    .title{
+        font-size: 8rem;
+        margin-top: 5%;
+    }
+}
